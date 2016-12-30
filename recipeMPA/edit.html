@@ -1,0 +1,72 @@
+<!--
+ * Name:         Ankita KAPOOR
+ * Student ID:   18358877
+ * User name:    18358877
+ * Subject Code: CSE4OAD
+-->
+
+<!DOCTYPE html >
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<style>
+		table, th , td  {border: 1px solid grey; border-collapse: collapse; padding: 5pt;}
+		table tr:nth-child(odd)	{background-color: #f1f1f1;}
+		table tr:nth-child(even) {background-color: #ffffff;}
+	</style>
+
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src= "edit.js"></script>
+
+</head>
+
+<body ng-app="appRecipe" ng-controller="appController">
+
+<h1>Recipe Collection</h1>
+<hr>
+<h2>Edit Recipe</h2>
+
+	<form >
+		<label>Enter id to be edited:  </label><input type="text" ng-model="id"></input>
+		<button type="display" ng-click="display()"> Display </button><br>
+		<hr>
+
+
+		<table>
+			<tr >
+				<td>id:</td>
+				<td> <input type="text"  ng-model="id1" readonly="true"></input> </td>
+			</tr>
+			<tr>
+				<td> <label>Name:  </label> </td>
+				<td> <input type="text"  ng-model="name" ></input> </td>
+			</tr>
+			<tr>
+				<td> <label>Serves:  </label> </td>
+				<td> <input type="text" ng-model="serves" ></input> </td>
+			</tr>
+			<tr>
+				<td> <label>Ingredients:  </label> </td>
+				<td> <input type="text" ng-model="ingredients" ></input> </td>
+			</tr>
+			<tr>
+				<td> <label>Remarks:  </label> </td>
+				<td> <input type="text" ng-model="remarks" ></input> </td>
+			</tr>
+		</table>
+	</br>
+	<label>Steps:  </label><br>
+	<textarea ng-model="steps" cols="80" rows="5" ></textarea><br><br>
+
+	<button type="submit" ng-click="editbtn()"> Submit Edit </button>
+
+	<a href="main.html"><button type="button">Return to Main Page</button></a> <br>
+
+</form>
+
+
+
+</body>
+</html>
+
